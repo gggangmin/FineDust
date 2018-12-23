@@ -1,0 +1,173 @@
+﻿            
+            
+            $(function(){
+                
+                var sum = 0.0; 
+                for(var i = 0; i<25;i++){
+                sum += parseInt(arrM[i]);
+                }
+                sum = sum/arrM.length;
+                var weight = ((180-sum)*100/180).toFixed(2);
+                if (weight >= 88) {
+                        document.getElementById('maini').src = "images/icon01.png";
+                        document.getElementById("comment").innerHTML = '맑고 깨끗한 날!';
+                        $('#banner').css('background-image', 'url("images/bg_sky.gif")');
+                    } else if (weight >= 78) {
+                       document.getElementById('maini').src = "images/icon02.png";
+                        document.getElementById("comment").innerHTML = '야외활동 가능~!';
+                    } else if (weight >= 70) {
+                        document.getElementById('maini').src = "images/icon03.png";
+                        document.getElementById("comment").innerHTML = '밖에 너무 오래 있지는 말아요';
+                    } else if (weight >= 60) {
+                        document.getElementById('maini').src = "images/icon04.png";
+                        document.getElementById("comment").innerHTML = '실외활동 삼가!';
+                    } else {
+                        document.getElementById('maini').src = "images/icon05.png";
+                        document.getElementById("comment").innerHTML = '집밖으로 나오면 안돼요!';
+                        $('#banner').css('background-image', 'url("images/bg_dust.gif")');
+                        
+                    }
+                    
+                    document.getElementById("score").innerHTML = weight +' 점';
+                    });
+            
+            function input_Text(name) {
+                var i = 0;
+                switch (name) {
+                    case '강서구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=1; break;
+                    case '양천구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=2;break;
+                    case '구로구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=3; break;
+                    case '영등포구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=4;break;
+                    case '금천구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=5; break;
+                    case '동작구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=6;break;
+                    case '관악구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=7; break;
+                    case '서초구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=8; break;
+                    case '강남구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=9; break;
+                    case '송파구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=10; break;
+                    case '강동구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=11; break;
+                    case '마포구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=12; break;
+                    case '서대문구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=13;break;
+                    case '은평구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=14; break;
+                    case '종로구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=15; break;
+                    case '중구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=16;break;
+                    case '용산구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=17; break;
+                    case '강북구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=18;break;
+                    case '성북구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=19;break;
+                    case '동대문구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=20; break;
+                    case '성동구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=21; break;
+                    case '노원구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.';i=22; break;
+                    case '중랑구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=23;break;
+                    case '광진구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=24;break;
+                    case '도봉구': document.getElementById("test").innerHTML = '서울 특별시 ' + name + ' 의 실시간 미세먼지 정보.'; i=25;break;
+                }
+                //예보이름
+                document.getElementById('ptitle').innerHTML = name + ' 미세먼지 예보';
+                //각 수치  변경
+                document.getElementById('m').innerHTML = arrM[i - 1] +' ㎍/㎥';
+                document.getElementById('c').innerHTML = arrC[i - 1] +' ㎍/㎥';
+                document.getElementById('o').innerHTML = arrO[i - 1] +' ppm';
+                document.getElementById('h').innerHTML = arrH[i - 1] +' ㎍/㎥';
+                //미세먼지 아이콘 변경
+                if (arrM[i - 1] >= 151) {
+                    document.getElementById('mi').src = "images/icon05.png";
+                } else if (arrM[i - 1] >= 81) {
+                    document.getElementById('mi').src = "images/icon04.png";
+                } else if (arrM[i - 1] >= 31) {
+                    document.getElementById('mi').src = "images/icon03.png";
+                } else if (arrM[i - 1] >= 15) {
+                    document.getElementById('mi').src = "images/icon02.png";
+                } else {
+                    document.getElementById('mi').src = "images/icon01.png";
+                }
+                //초미세 아이콘 변경
+                if (arrC[i - 1] >= 76) {
+                    document.getElementById('ci').src = "images/icon05.png";
+                } else if (arrC[i - 1] >= 36) {
+                    document.getElementById('ci').src = "images/icon04.png";
+                } else if (arrC[i - 1] >= 16) {
+                    document.getElementById('ci').src = "images/icon03.png";
+                } else if (arrC[i - 1] >= 10) {
+                    document.getElementById('ci').src = "images/icon02.png";
+                } else {
+                    document.getElementById('ci').src = "images/icon01.png";
+                }
+                //오존 아이콘 변경
+                if (arrO[i - 1] >= 0.15) {
+                    document.getElementById('oi').src = "images/icon05.png";
+                } else if (arrO[i - 1] >= 0.09) {
+                    document.getElementById('oi').src = "images/icon04.png";
+                } else if (arrO[i - 1] >= 0.03) {
+                    document.getElementById('oi').src = "images/icon03.png";
+                } else if (arrO[i - 1] >= 0.01) {
+                    document.getElementById('oi').src = "images/icon02.png";
+                } else {
+                    document.getElementById('oi').src = "images/icon01.png";
+                }
+                //아황산 아이콘 변경
+                if (arrH[i - 1] >= 0.15) {
+                    document.getElementById('hi').src = "images/icon05.png";
+                } else if (arrH[i - 1] >= 0.05) {
+                    document.getElementById('hi').src = "images/icon04.png";
+                } else if (arrH[i - 1] >= 0.02) {
+                    document.getElementById('hi').src = "images/icon03.png";
+                } else if (arrH[i - 1] >= 0.01) {
+                    document.getElementById('hi').src = "images/icon02.png";
+                } else {
+                    document.getElementById('hi').src = "images/icon01.png";
+                }
+                //오늘 예보
+                if (arrM[i - 1] >= 151) {
+                    document.getElementById('ti').src = "images/icon05.png";
+                    document.getElementById('dt').innerHTML = arrM[i - 1] +' ㎍/㎥';
+                } else if (arrM[i - 1] >= 81) {
+                    document.getElementById('ti').src = "images/icon04.png";
+                    document.getElementById('dt').innerHTML = arrM[i - 1] +' ㎍/㎥';
+                } else if (arrM[i - 1] >= 31) {
+                    document.getElementById('ti').src = "images/icon03.png";
+                    document.getElementById('dt').innerHTML = arrM[i - 1] +' ㎍/㎥';
+                } else if (arrM[i - 1] >= 15) {
+                    document.getElementById('ti').src = "images/icon02.png";
+                    document.getElementById('dt').innerHTML = arrM[i - 1] +' ㎍/㎥';
+                } else {
+                    document.getElementById('ti').src = "images/icon01.png";
+                    document.getElementById('dt').innerHTML = arrM[i - 1] +' ㎍/㎥';
+                }
+                //내일 예보
+                if (arrN[i - 1] >= 151) {
+                    document.getElementById('ni').src = "images/icon05.png";
+                    document.getElementById('dn').innerHTML = arrN[i - 1] +' ㎍/㎥';
+                } else if (arrN[i - 1] >= 81) {
+                    document.getElementById('ni').src = "images/icon04.png";
+                    document.getElementById('dn').innerHTML = arrN[i - 1] +' ㎍/㎥';
+                } else if (arrN[i - 1] >= 31) {
+                    document.getElementById('ni').src = "images/icon03.png";
+                    document.getElementById('dn').innerHTML = arrN[i - 1] +' ㎍/㎥';
+                } else if (arrN[i - 1] >= 15) {
+                    document.getElementById('ni').src = "images/icon02.png";
+                    document.getElementById('dn').innerHTML = arrN[i - 1] +' ㎍/㎥';
+                } else {
+                    document.getElementById('ni').src = "images/icon01.png";
+                    document.getElementById('dn').innerHTML = arrN[i - 1] +' ㎍/㎥';
+                }
+                //내일 모래 예보
+                if (arrNN[i - 1] >= 151) {
+                    document.getElementById('nni').src = "images/icon05.png";
+                    document.getElementById('dnn').innerHTML = arrNN[i - 1] +' ㎍/㎥';
+                } else if (arrNN[i - 1] >= 81) {
+                    document.getElementById('nni').src = "images/icon04.png";
+                    document.getElementById('dnn').innerHTML = arrNN[i - 1] +' ㎍/㎥';
+                } else if (arrNN[i - 1] >= 31) {
+                    document.getElementById('nni').src = "images/icon03.png";
+                    document.getElementById('dnn').innerHTML = arrNN[i - 1] +' ㎍/㎥';
+                } else if (arrNN[i - 1] >= 15) {
+                    document.getElementById('nni').src = "images/icon02.png";
+                    document.getElementById('dnn').innerHTML = arrNN[i - 1] +' ㎍/㎥';
+                } else {
+                    document.getElementById('nni').src = "images/icon01.png";
+                    document.getElementById('dnn').innerHTML = arrNN[i - 1] +' ㎍/㎥';
+                }
+            }
+        </script>
+
+    </body>
+</html>

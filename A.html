@@ -1,0 +1,173 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Landed by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Landed by HTML5 UP</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload landing">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="index.html">먼지, 뭐지?</a></h1>
+                <nav id="nav">
+                </nav>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner" style="">
+                <div class="content">
+                    <header>
+                        <h2>오늘의 서울시 미세먼지 종합 점수:</h2>
+                        <h2 id="score">score</h2>
+                        <p id="comment">comment</p>
+                    </header>
+                    <span class="image"><img id = "maini" src="images/icon01.png" alt=""></span>
+                </div>
+                <a href="#one" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- One -->
+            <section id="one" class="spotlight style1 bottom">
+                <span class="image fit main"><img src="images/pic02.jpg" alt=""></span>
+                <div class="content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-5 col-12-medium" style="margin: 0px 0px 0px 100px; ">
+                                <header>
+                                    <h2>미세먼지 상세정보</h2>
+                                    <p id="test">지도를 클릭하세요!</p>
+                                    <div class="icontable" style="margin:0 auto;">
+                                        <div style="float:left; width:100px; border-top:1px solid red; border-bottom:1px solid red; border-left:1px solid red">
+                                            <p align="center">미세먼지</p>
+                                            <img src="images/icon01.png" id="mi" style="margin-left: auto; margin-right: auto;margin-bottom:20px; display: block;">
+                                            <p id="m" align="center">undefined</p>
+                                        </div>
+                                        <div style="float:left;width:100px; border-top:1px solid red; border-bottom:1px solid red;">
+                                            <p align="center">초미세먼지</p>
+                                            <img src="images/icon01.png" id="ci" style="margin-left: auto; margin-right: auto;margin-bottom:20px; display: block;">
+                                            <p id="c" align="center">undefined</p>
+                                        </div>
+                                        <div style="float:left;width:100px; border-top:1px solid red; border-bottom:1px solid red;">
+                                            <p align="center">오존</p>
+                                            <img src="images/icon01.png" id="oi" style="margin-left: auto; margin-right: auto;margin-bottom:20px; display: block;">
+                                            <p id="o" align="center">undefined</p>
+                                        </div>
+                                        <div style="float:left;width:100px; border-top:1px solid red; border-bottom:1px solid red; border-right:1px solid red">
+                                            <p align="center">아황산</p>
+                                            <img src="images/icon01.png" id="hi" style="margin-left: auto; margin-right: auto;margin-bottom:20px; display: block;">
+                                            <p id="h" align="center">undefined</p>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                            <span class="col-4 col-12-medium" style="margin: 50px 0px 0px 200px;">
+                                <img src="images/map.png" usemap="#Pmap">
+                                <map name="Pmap">
+                                    <area shape="rect" coords="27,124 , 56,134" onclick="input_Text('강서구')" target="_blank" alt="강서구">
+                                    <area shape="rect" coords="50,163,79,173" onclick="input_Text('양천구')" target="_blank" alt="양천구">
+                                    <area shape="rect" coords="41,189,70,198" onclick="input_Text('구로구')" target="_blank" alt="구로구">
+                                    <area shape="rect" coords="91,160,127,170" onclick="input_Text('영등포구')" target="_blank" alt="영등포구">
+                                    <area shape="rect" coords=" 79,218,109,230" onclick="input_Text('금천구')" target="_blank" alt="금천구">
+                                    <area shape="rect" coords="120,179,148,193" onclick="input_Text('동작구')" target="_blank" alt="동작구">
+                                    <area shape="rect" coords="120,209,149,222" onclick="input_Text('관악구')" target="_blank" alt="관악구">
+                                    <area shape="rect" coords="164,15,193,205" onclick="input_Text('서초구')" target="_blank" alt="서초구">
+                                    <area shape="rect" coords="207,190 , 237,203" onclick="input_Text('강남구')" target="_blank" alt="강남구">
+                                    <area shape="rect" coords="241,175,271,184" onclick="input_Text('송파구')" target="_blank" alt="송파구">
+                                    <area shape="rect" coords="265,134,295,141" onclick="input_Text('강동구')" target="_blank" alt="강동구">
+                                    <area shape="rect" coords="91,129,121,140" onclick="input_Text('마포구')" target="_blank" alt="마포구">
+                                    <area shape="rect" coords="106,112,141,121" onclick="input_Text('서대문구')" target="_blank" alt="서대문구">
+                                    <area shape="rect" coords="106,74,134,81" onclick="input_Text('은평구')" target="_blank" alt="은평구">
+                                    <area shape="rect" coords="144,106,173,116" onclick="input_Text('종로구')" target="_blank" alt="종로구">
+                                    <area shape="rect" coords="159,127,178,136" onclick="input_Text('중구')" target="_blank" alt="중구">
+                                    <area shape="rect" coords="149,153,171,162" onclick="input_Text('용산구')" target="_blank" alt="용산구">
+                                    <area shape="rect" coords="168,51,196,64" onclick="input_Text('강북구')" target="_blank" alt="강북구">
+                                    <area shape="rect" coords="172,90,201,100" onclick="input_Text('성북구')" target="_blank" alt="성북구">
+                                    <area shape="rect" coords="193,110,229,119" onclick="input_Text('동대문구')" target="_blank" alt="동대문구">
+                                    <area shape="rect" coords="190,135,218,143" onclick="input_Text('성동구')" target="_blank" alt="성동구">
+                                    <area shape="rect" coords="212,12,241,51" onclick="input_Text('노원구')" target="_blank" alt="노원구">
+                                    <area shape="rect" coords="225,92,255,100" onclick="input_Text('중랑구')" target="_blank" alt="중랑구">
+                                    <area shape="rect" coords="223,139,251,148" onclick="input_Text('광진구')" target="_blank" alt="광진구">
+                                    <area shape="rect" coords="183,26,213,38" onclick="input_Text('도봉구')" target="_blank" alt="도봉구">
+                                </map>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#two" class="goto-next scrolly">Next</a>
+            </section>
+
+
+            <!-- Four -->
+            <section id="two" class="wrapper style1 special fade-up">
+                <div class="container">
+                    <header class="major">
+                        <h2 id="ptitle">미세먼지 예보</h2>
+                        <p>오늘과 내일, 모레의 미세먼지 정보를 한 눈에 살펴볼 수 있습니다.</p>
+                    </header>
+                    <div class="box alt">
+                        <div class="row gtr-uniform">
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <!--<span class="icon alt major fa-area-chart"></span>-->
+                                <img src="images/icon01.png" id="ti" style="margin-left: auto; margin-right: auto;margin-top:35px;margin-bottom:50px; display: block;">
+                                <h3>오늘</h3>
+                                <p id="dt">undefined</p>
+                            </section>
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <img src="images/icon01.png" id="ni" style="margin-left: auto; margin-right: auto;margin-top:35px;margin-bottom:50px; display: block;">
+                                <h3>내일</h3>
+                                <p id="dn">undefined</p>
+                            </section>
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <img src="images/icon01.png" id="nni" style="margin-left: auto; margin-right: auto;margin-top:35px;margin-bottom:50px; display: block;">
+                                <h3>모레</h3>
+                                <p id="dnn">undefined</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>© Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <div id="titleBar">
+            <a href="#navPanel" class="toggle"></a>
+            <span class="title"><a href="index.html">먼지, 뭐지?</a></span>
+        </div>
+        <div id="navPanel"><nav></nav></div>
+
+
+        <script id = list language="javascript">
